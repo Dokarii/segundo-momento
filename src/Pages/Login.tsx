@@ -1,7 +1,14 @@
 import "./Login.css";
 import {Link } from "react-router-dom";
+import { useEffect } from "react";
 
 const Login = () => {
+  useEffect(() => {
+    document.body.classList.add("login-background");
+    return () => {
+      document.body.classList.remove("login-background");
+    };
+  }, []);
   return (
     <div className="form-container">
       <p className="title">Iniciar sesión</p>

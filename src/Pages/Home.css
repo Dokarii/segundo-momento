@@ -1,0 +1,56 @@
+/* Estilos para el contenedor principal */
+aside {
+  background-color: #050504;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 16rem;
+  border: 1px solid black;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+}
+
+.titulo {
+  color: white;
+  text-decoration: none;
+}
+
+.titulo:hover {
+  color: #f0f0f0;
+}
+
+.boton {
+  font-size: 25px;
+  background-color: #1a1a1a;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+}
+
+.boton:hover {
+  background-color: #333;
+  color: white;
+}
+
+body {
+  margin-left: 16rem;
+}
+
+/* Fondos */
+.home-background{
+  background: url("home.jpg") no-repeat center center fixed;
+  background-size: cover;
+}

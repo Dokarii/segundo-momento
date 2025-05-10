@@ -7,9 +7,12 @@
   font-family: "Inter", sans-serif;
 }
 
-body {
-  background: url("Background-login.jpg");
+.login-background {
+  background: url("Background-login.jpg") no-repeat center center fixed;
   background-size: cover;
+}
+
+body {
   display: flex;
   justify-content: center;
   align-items: center;

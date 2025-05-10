@@ -1,7 +1,14 @@
 import "./Registro.css";
 import {Link } from "react-router-dom";
+import { useEffect } from "react";
 
 const Registro = () => {
+  useEffect(() => {
+    document.body.classList.add("login-background");
+    return () => {
+      document.body.classList.remove("login-background");
+    };
+  }, []);
   return (
     <div className="form-container">
       <p className="title">Iniciar sesión</p>
@@ -12,7 +19,7 @@ const Registro = () => {
             type="text"
             name="username"
             id="username"
-            placeholder="Ingresa tu nombre de usuario"
+            placeholder="Ingresa tu usuario"
           />
         </div>
         <div className="input-group">
