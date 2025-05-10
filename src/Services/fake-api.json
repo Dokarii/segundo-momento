@@ -1,0 +1,18 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "usuario": "user1",
+      "contraseña": "1234",
+      "nombre": "Eva Luna",
+      "correo": "user1@ejemplo.com"
+    },
+    {
+      "id": "2",
+      "usuario": "user2",
+      "contraseña": "1234",
+      "nombre": "Ricardo Jose",
+      "correo": "user2@ejemplo.com"
+    }
+  ]
+}
