@@ -54,3 +54,18 @@ body {
   background: url("home.jpg") no-repeat center center fixed;
   background-size: cover;
 }
+
+.services-background {
+  background: url("Services.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+.contact-background {
+  background: url("Contact.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+.about-background {
+  background: url("About.jpg") no-repeat center center fixed;
+  background-size: cover;
+}

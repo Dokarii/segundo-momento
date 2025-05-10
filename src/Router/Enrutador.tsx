@@ -2,6 +2,8 @@ import Login from "../Pages/Login";
 import Registro from "../Pages/Registro";
 import Home from "../Pages/Home";
 import Servicios from "../Pages/Servicios";
+import Contacto from "../Pages/Contacto";
+import About from "../Pages/About";
 
 export let enrutador = [
   {
@@ -21,12 +23,12 @@ export let enrutador = [
     element: <Servicios />,
   },
   {
-    path: "/Contacto",
-    element: null,
+    path: "/Contact",
+    element: <Contacto />,
   },
   {
-    path: "/Acerca-de",
-    element: null,
+    path: "/About",
+    element: <About />,
   },
   {
     path: "/Cerrar-Sesion",

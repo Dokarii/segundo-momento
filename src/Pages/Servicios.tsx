@@ -1,6 +1,15 @@
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
+import "./Home.css";
 
 const Servicios = () => {
+    useEffect(() => {
+        document.body.classList.add("services-background");
+        return () => {
+          document.body.classList.remove("services-background");
+        };
+      }, []);
+
   return (
     <aside>
         <Link to="/Home" className="titulo">
@@ -9,10 +18,10 @@ const Servicios = () => {
         <Link to="/Servicios" className="boton">
           Servicios
         </Link>
-        <Link to="/" className="boton">
+        <Link to="/Contact" className="boton">
           Contacto
         </Link>
-        <Link to="/" className="boton">
+        <Link to="/About" className="boton">
           Acerca de
         </Link>
         <Link to="/" className="boton">

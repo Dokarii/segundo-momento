@@ -1,17 +1,18 @@
+//import React from 'react'
 import "./Home.css";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 
-const Home = () => {
-  useEffect(() => {
-    document.body.classList.add("home-background");
-    return () => {
-      document.body.classList.remove("home-background");
-    };
-  }, []);
+const About = () => {
+    useEffect(() => {
+        document.body.classList.add("about-background");
+        return () => {
+          document.body.classList.remove("about-background");
+        };
+      }, []);
 
   return (
-      <aside>
+    <aside>
         <Link to="/Home" className="titulo">
           <h1>Home</h1>
         </Link>
@@ -28,7 +29,7 @@ const Home = () => {
           Cerrar Sesión
         </Link>
       </aside>
-  );
-};
+  )
+}
 
-export default Home;
+export default About
