@@ -41,7 +41,7 @@ const Login = () => {
       <p className="signup" style={{ marginTop: "20px" }}>
         <a rel="noopener noreferrer" href="#" className="signup-link">
           {" "}
-          <Link to="/registro">¿No tiene una cuenta?</Link>
+          <Link to="/Sing-up">¿No tiene una cuenta?</Link>
         </a>
       </p>
     </div>
