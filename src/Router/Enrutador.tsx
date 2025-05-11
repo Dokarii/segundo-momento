@@ -11,7 +11,7 @@ export let enrutador = [
     element: <Login />,
   },
   {
-    path: "/Registro",
+    path: "/Sing-up",
     element: <Registro />,
   },
   {
@@ -19,7 +19,7 @@ export let enrutador = [
     element: <Home />,
   },
   {
-    path: "/Servicios",
+    path: "/Services",
     element: <Servicios />,
   },
   {
