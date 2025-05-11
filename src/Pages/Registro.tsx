@@ -10,7 +10,7 @@ const Registro = () => {
   const [getPassword, setPassword] = useState("");
   const [getName, setName] = useState("");
   const [getHoraRegistro, setHoraRegistro] = useState(null);
-  const [usuarios, setUsuarios] = useState<{ usuario: string }[]>([]);
+  const [usuarios, setUsuarios] = useState([]);
   let navigate = useNavigate();
 
   function getUsuarios() {

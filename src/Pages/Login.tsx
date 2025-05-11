@@ -16,58 +16,6 @@ const Login = () => {
       document.body.classList.remove("login-background");
     };
   }, []);
-
-  const [getUsuario, setUsuario] = useState("");
-  const [getPassword, setPassword] = useState("");
-  const [getHoraLogin, setHoraLogin] = useState(null);
-  interface Usuario {
-    usuario: string;
-    contrasena: string;
-    nombre: string;
-  }
-  
-  const [usuarios, setUsuarios] = useState<Usuario[]>([]);
-  let navigate = useNavigate();
-
-  function getUsuarios() {
-    fetch(apiUsuarios)
-      .then((response) => response.json())
-      .then((data) => setUsuarios(data))
-      .catch((error) => console.log(error));
-  }
-  useEffect(() => {
-    getUsuarios();
-  }, []);
-
-  function buscarUsuario() {
-    let usuarioEncontrado = usuarios.find(
-      (usuario) =>
-        getUsuario == usuario.usuario && getPassword == usuario.contrasena
-    );
-    return usuarioEncontrado;
-  }
-
-  function inicioSesion() {
-    if (buscarUsuario()) {
-      let tokenAcceso = generarToken();
-      localStorage.setItem("token", tokenAcceso);
-      localStorage.setItem("usuario", JSON.stringify(buscarUsuario()));
-      alertaRedireccion(
-        navigate,
-        "Bienvenido " + (buscarUsuario()?.nombre || "Usuario"),
-        "En breves segundos será redireccionado al Home",
-        "success",
-        "/home"
-      );
-      let horaInicio = new Date();
-      console.log(horaInicio);
-      // setHoraLogin(horaInicio)
-      // console.log(getHoraLogin);
-    } else {
-      alertaError("Error", "Usuario o contraseña incorrectos", "error");
-    }
-  }
-
   return (
     <div className="form-container">
       <p className="title">Iniciar sesión</p>
