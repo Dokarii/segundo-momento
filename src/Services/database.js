@@ -1,16 +1,16 @@
-export let Users = [
+export let usuarios = [
     {
         id: 1,
-        usuario: "usuario1",
-        password: "1234",
-        nombre: "Eva Luna",
-        correo: "user1@example.com"
+        nombre: "Juan Pérez",
+        usuario: "juanp",
+        contrasena: "123",
+        correo: "juan.perez@example.com"
     },
     {
         id: 2,
-        usuario: "usuario2",
-        password: "1234",
-        nombre: "Ricardo Jose",
-        correo: "user2@example.com"
+        nombre: "María López",
+        usuario: "marial",
+        contrasena: "456",
+        correo: "maria.lopez@example.com"
     }
-]
+];

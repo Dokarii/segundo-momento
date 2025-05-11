@@ -16,7 +16,7 @@ const About = () => {
         <Link to="/Home" className="titulo">
           <h1>Home</h1>
         </Link>
-        <Link to="/Servicios" className="boton">
+        <Link to="/Services" className="boton">
           Servicios
         </Link>
         <Link to="/Contact" className="boton">
