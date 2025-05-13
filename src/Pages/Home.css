@@ -1,4 +1,10 @@
 /* Estilos para el contenedor principal */
+.container {
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+}
+
 aside {
   background-color: #000000;
   position: fixed;
@@ -6,7 +12,7 @@ aside {
   left: 0;
   height: 100vh;
   width: 16rem;
-  border: 1px solid black;
+  border: 1px solid white;
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
@@ -21,8 +27,6 @@ aside:hover {
   width: 300px;
   animation: slide-in 500ms; 
 }
-
-
 
 
 .titulo {
@@ -55,12 +59,11 @@ aside:hover {
 }
 
 body {
-  margin-left: 16rem;
-  cursor: url("cursor.png"), auto;
+  border: 1px solid white;
 }
 
 /* Fondos */
-.home-background{
+/* .home-background{
   background: url("home.jpg") no-repeat center center fixed;
   background-size: cover;
 }
@@ -78,5 +81,4 @@ body {
 .about-background {
   background: url("About.jpg") no-repeat center center fixed;
   background-size: cover;
-}
-
+} */

@@ -11,6 +11,8 @@ const Home = () => {
   }, []);
 
   return (
+    <div className="container">
+      <h1>Home</h1>
       <aside>
         <Link to="/Home" className="titulo">
           <h1>Home</h1>
@@ -28,6 +30,7 @@ const Home = () => {
           Cerrar Sesión
         </Link>
       </aside>
+    </div>
   );
 };
 
