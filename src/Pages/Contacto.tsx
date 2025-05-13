@@ -2,7 +2,6 @@
 import "./Home.css";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
-
 const Contacto = () => {
     useEffect(() => {
         document.body.classList.add("contact-background");

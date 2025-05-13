@@ -1,17 +1,12 @@
 import "./Login.css";
 import { Link, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
-import {
-  alertaError,
-  alertaRedireccion,
-  generarToken,
-} from "../Helpers/funciones";
+import { alertaError, alertaRedireccion } from "../Helpers/funciones";
 let apiUsuarios = "http://localhost:3000/usuarios";
 interface Usuario {
   usuario: string;
   contrasena: string;
   nombre: string;
-  
 }
 const Login = () => {
   const [usuario, setUsuario] = useState<string>("");
@@ -54,16 +49,14 @@ const Login = () => {
     const usuarioEncontrado = buscarUsuario();
 
     if (usuarioEncontrado) {
-      const tokenAcceso: string = generarToken();
-      localStorage.setItem("token", tokenAcceso);
-      localStorage.setItem("usuario", JSON.stringify(usuarioEncontrado));
+      localStorage.setItem("auth", "true");
 
       alertaRedireccion(
         navigate,
         `Bienvenido ${usuarioEncontrado.nombre}`,
         "En breves segundos será redireccionado al Home",
         "success",
-        "/home"
+        "/Home"
       );
 
       const horaInicio: Date = new Date();
@@ -79,7 +72,6 @@ const Login = () => {
   }
 
   return (
-    
     <div className="form-container">
       <p className="title">Iniciar sesión</p>
       <form className="form">
@@ -123,7 +115,6 @@ const Login = () => {
       </p>
     </div>
   );
-  
 };
 
 export default Login;
