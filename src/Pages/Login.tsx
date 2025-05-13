@@ -11,7 +11,7 @@ interface Usuario {
   usuario: string;
   contrasena: string;
   nombre: string;
-  // Agrega otras propiedades según tu API
+  
 }
 const Login = () => {
   const [usuario, setUsuario] = useState<string>("");
@@ -19,7 +19,6 @@ const Login = () => {
   const [horaLogin, setHoraLogin] = useState<Date | null>(null);
   const [usuarios, setUsuarios] = useState<Usuario[]>([]);
   const navigate = useNavigate();
-  // Define tu endpoint API
 
   function getUsuarios(): void {
     fetch(apiUsuarios)
