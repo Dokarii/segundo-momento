@@ -20,6 +20,13 @@
       "usuario": "josep",
       "contrasena": "1234",
       "correo": "josep@doka.com"
+    },
+    {
+      "id": "d627",
+      "nombre": "Ricardo",
+      "usuario": "Dokari",
+      "contrasena": "@D0K4R1Kun",
+      "correo": "ricardotejedor18@gmail.com"
     }
   ]
 }
