@@ -12,7 +12,8 @@ aside {
   left: 0;
   height: 100vh;
   width: 16rem;
-  border: 1px solid white;
+  border-radius: 0.75rem;
+  border: 1px solid #586F7C;
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
@@ -58,17 +59,10 @@ aside:hover {
   color: white;
 }
 
-body {
-  border: 1px solid white;
-}
-
 /* Fondos */
-/* .home-background{
-  background: url("home.jpg") no-repeat center center fixed;
-  background-size: cover;
-}
 
-.services-background {
+
+/*.services-background {
   background: url("Services.jpg") no-repeat center center fixed;
   background-size: cover;
 }
