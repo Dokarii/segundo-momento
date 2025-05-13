@@ -16,7 +16,7 @@ interface Usuario {
 const Login = () => {
   const [usuario, setUsuario] = useState<string>("");
   const [password, setPassword] = useState<string>("");
-  const [horaLogin, setHoraLogin] = useState<Date | null>(null);
+  //const [horaLogin, setHoraLogin] = useState<Date | null>(null);
   const [usuarios, setUsuarios] = useState<Usuario[]>([]);
   const navigate = useNavigate();
 
@@ -68,7 +68,7 @@ const Login = () => {
 
       const horaInicio: Date = new Date();
       console.log(horaInicio);
-      setHoraLogin(horaInicio);
+      //setHoraLogin(horaInicio);
     } else {
       alertaError(
         "Error de autenticación",

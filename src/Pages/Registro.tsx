@@ -21,7 +21,7 @@ const Registro = () => {
   const [contrasena, setcontrasena] = useState<string>("");
   const [nombre, setNombre] = useState<string>("");
   const [correo, setCorreo] = useState<string>("");
-  const [horaLogin, setHoraLogin] = useState<Date | null>(null);
+  //const [horaLogin, setHoraLogin] = useState<Date | null>(null);
   const navigate = useNavigate();
 
   function getUsuarios(): void {
@@ -42,7 +42,7 @@ const Registro = () => {
   }
 
   function registrarUsuario(event: React.FormEvent): void {
-    event.preventDefault(); // Evita el reload del formulario
+    event.preventDefault();
 
     const usuarioExistente = buscarUsuario();
   

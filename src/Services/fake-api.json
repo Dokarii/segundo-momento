@@ -13,7 +13,13 @@
       "usuario": "marial",
       "contrasena": "456",
       "correo": "maria.lopez@example.com"
+    },
+    {
+      "id": "31a1",
+      "nombre": "José Ricardo",
+      "usuario": "josep",
+      "contrasena": "1234",
+      "correo": "josep@doka.com"
     }
-  ],
-  "envios": []
+  ]
 }
