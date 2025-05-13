@@ -4,6 +4,7 @@ import Home from "../Pages/Home";
 import Servicios from "../Pages/Servicios";
 import Contacto from "../Pages/Contacto";
 import About from "../Pages/About";
+import RutaProtegida from "../Componets/RutaProtegida";
 
 export let enrutador = [
   {
@@ -16,22 +17,38 @@ export let enrutador = [
   },
   {
     path: "/Home",
-    element: <Home />,
+    element: (
+      <RutaProtegida>
+        <Home />
+      </RutaProtegida>
+    ),
   },
   {
     path: "/Services",
-    element: <Servicios />,
+    element: (
+      <RutaProtegida>
+        <Servicios />
+      </RutaProtegida>
+    ),
   },
   {
     path: "/Contact",
-    element: <Contacto />,
+    element: (
+      <RutaProtegida>
+        <Contacto />
+      </RutaProtegida>
+    ),
   },
   {
     path: "/About",
-    element: <About />,
+    element: (
+      <RutaProtegida>
+        <About />
+      </RutaProtegida>
+    ),
   },
   {
     path: "/Cerrar-Sesion",
-    element: null,
+    element: null, // Puedes usarlo para logout más adelante
   },
 ];

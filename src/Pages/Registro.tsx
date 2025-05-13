@@ -1,10 +1,7 @@
 import "./Registro.css";
 import { Link, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
-import {
-  alertaError,
-  alertaRedireccion
-} from "../Helpers/funciones";
+import { alertaError, alertaRedireccion } from "../Helpers/funciones";
 
 let apiUsuarios = "http://localhost:3000/usuarios";
 
@@ -17,7 +14,7 @@ interface Usuario {
 
 const Registro = () => {
   const [usuarios, setUsuarios] = useState<Usuario[]>([]);
-  const [usuario, setUsuario] = useState<string>("");  
+  const [usuario, setUsuario] = useState<string>("");
   const [contrasena, setcontrasena] = useState<string>("");
   const [nombre, setNombre] = useState<string>("");
   const [correo, setCorreo] = useState<string>("");
@@ -44,24 +41,35 @@ const Registro = () => {
   function registrarUsuario(event: React.FormEvent): void {
     event.preventDefault();
 
+    // Validar campos vacíos o con solo espacios
+    if (
+      !usuario.trim() ||
+      !contrasena.trim() ||
+      !nombre.trim() ||
+      !correo.trim()
+    ) {
+      alertaError("Error", "Todos los campos son obligatorios", "error");
+      return;
+    }
+
     const usuarioExistente = buscarUsuario();
-  
+
     if (!usuarioExistente) {
       const nuevoUsuario: Usuario = {
-        nombre: nombre,
-        usuario: usuario,
-        contrasena: contrasena,
-        correo: correo
+        nombre: nombre.trim(),
+        usuario: usuario.trim(),
+        contrasena: contrasena.trim(),
+        correo: correo.trim(),
       };
-  
+
       fetch(apiUsuarios, {
         method: "POST",
         headers: {
-          "Content-Type": "application/json"
+          "Content-Type": "application/json",
         },
-        body: JSON.stringify(nuevoUsuario)
+        body: JSON.stringify(nuevoUsuario),
       });
-  
+
       alertaRedireccion(
         navigate,
         "Usuario registrado correctamente",
@@ -69,7 +77,7 @@ const Registro = () => {
         "success",
         "/"
       );
-  
+
       const horaInicio = new Date();
       console.log(horaInicio);
       // setHoraLogin(horaInicio)
@@ -78,16 +86,9 @@ const Registro = () => {
     }
   }
 
-  useEffect(() => {
-    document.body.classList.add("login-background");
-    return () => {
-      document.body.classList.remove("login-background");
-    };
-  }, []);
-
   return (
     <div className="form-container">
-      <p className="title">Iniciar sesión</p>
+      <p className="title">Registro</p>
       <form className="form" onSubmit={registrarUsuario}>
         <div className="input-group">
           <label htmlFor="username">Usuario</label>
@@ -133,12 +134,14 @@ const Registro = () => {
             onChange={(e) => setCorreo(e.target.value)}
           />
         </div>
-        <button type="submit" className="sign" style={{ marginBottom: "10px" }}>
+        <button type="submit" className="sign" style={{ marginTop: "10px", marginBottom: "10px" }}>
           Registrar
         </button>
       </form>
       <p className="signup">
-        <Link to="/" className="signup-link">¿Ya tienes una cuenta?</Link>
+        <Link to="/" className="signup-link">
+          ¿Ya tienes una cuenta?
+        </Link>
       </p>
     </div>
   );

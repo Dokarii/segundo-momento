@@ -1,15 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
-
-.login-background {
-  background: url("Background-login.jpg") no-repeat center center fixed;
-  background-size: cover;
-}
-
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Inter", sans-serif;
 }
 
 body {
@@ -17,6 +9,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  background: black;
 }
 
 .container {
@@ -98,7 +91,7 @@ body {
 .sign {
   display: block;
   width: 100%;
-  background-color: #534135;
+  background-color: #550047;
   padding: 0.75rem;
   text-align: center;
   color: #ffff;

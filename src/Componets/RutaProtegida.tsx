@@ -1,9 +1,13 @@
-import type { JSX } from "react"
-import { Navigate } from "react-router-dom"
+import { Navigate } from "react-router-dom";
+import React from "react";
 
-function RutaProtegida({ proteger }: { proteger: JSX.Element }) {
-    let tokenAcceso = localStorage.getItem("token")
-    return tokenAcceso ? proteger : <Navigate to="/" />
+interface Props {
+  children: React.ReactNode;
 }
 
-export default RutaProtegida
+const RutaPrivada = ({ children }: Props) => {
+  const isAuthenticated = localStorage.getItem("auth") === "true";
+  return isAuthenticated ? children : <Navigate to="/" />;
+};
+
+export default RutaPrivada;
