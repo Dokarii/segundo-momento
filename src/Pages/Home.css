@@ -1,6 +1,6 @@
 /* Estilos para el contenedor principal */
 aside {
-  background-color: #050504;
+  background-color: #000000;
   position: fixed;
   top: 0;
   left: 0;
@@ -14,20 +14,29 @@ aside {
   box-sizing: border-box;
   justify-content: center;
   align-items: center;
+  transition: width 1s, transform 2s;
 }
 
+aside:hover {
+  width: 300px;
+  animation: slide-in 500ms; 
+}
+
+
+
+
 .titulo {
-  color: white;
+  color: rgb(255, 255, 255);
   text-decoration: none;
 }
 
 .titulo:hover {
-  color: #f0f0f0;
+  color: #494949;
 }
 
 .boton {
   font-size: 25px;
-  background-color: #1a1a1a;
+  background-color: #586F7C;
   color: white;
   border: none;
   padding: 0.5rem 1rem;
@@ -47,6 +56,7 @@ aside {
 
 body {
   margin-left: 16rem;
+  cursor: url("cursor.png"), auto;
 }
 
 /* Fondos */
@@ -69,3 +79,4 @@ body {
   background: url("About.jpg") no-repeat center center fixed;
   background-size: cover;
 }
+

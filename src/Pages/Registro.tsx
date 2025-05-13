@@ -1,63 +1,12 @@
 import "./Registro.css";
-import {Link, useNavigate } from "react-router-dom";
-import { useState,useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
 import { alertaError, alertaRedireccion } from "../Helpers/funciones";
-import "./Registro.css";
 let apiUsuarios = "http://localhost:3000/usuarios";
 
 const Registro = () => {
-  const [getUsuario, setUsuario] = useState("");
-  const [getPassword, setPassword] = useState("");
-  const [getName, setName] = useState("");
-  const [getHoraRegistro, setHoraRegistro] = useState(null);
-  const [usuarios, setUsuarios] = useState([]);
-  let navigate = useNavigate();
 
-  function getUsuarios() {
-    fetch(apiUsuarios)
-      .then((response) => response.json())
-      .then((data) => setUsuarios(data))
-      .catch((error) => console.log(error));
-  }
-  useEffect(() => {
-    getUsuarios();
-  }, []);
-
-  function buscarUsuario() {
-    let usuarioEncontrado = usuarios.find(
-      (usuario) => getUsuario == usuario.usuario
-    );
-    return usuarioEncontrado;
-  }
-
-  function registrarUsuario() {
-    if (!buscarUsuario()) {
-      let nuevoUsuario = {
-        nombre: getName,
-        usuario: getUsuario,
-        contrasena: getPassword,
-      };
-      fetch(apiUsuarios, {
-        method: "POST",
-        body: JSON.stringify(nuevoUsuario),
-      });
-      alertaRedireccion(
-        navigate,
-        "El usuario registrado correctamente",
-        "En breves segundos será redireccionado al login",
-        "success",
-        "/"
-      );
-      let horaInicio = new Date();
-      console.log(horaInicio);
-      // setHoraLogin(horaInicio)
-      // console.log(getHoraLogin);
-    } else {
-      alertaError("Error", "Usuario ya existe en la base de datos", "error");
-    }
-  }
-
-
+  
   useEffect(() => {
     document.body.classList.add("login-background");
     return () => {

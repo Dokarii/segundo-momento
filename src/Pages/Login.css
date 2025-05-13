@@ -8,7 +8,7 @@
 }
 
 .login-background {
-  background: url("Background-login.jpg") no-repeat center center fixed;
+  background-color: #2F4550;
   background-size: cover;
 }
 

@@ -13,7 +13,6 @@ interface Usuario {
   nombre: string;
   // Agrega otras propiedades según tu API
 }
-
 const Login = () => {
   const [usuario, setUsuario] = useState<string>("");
   const [password, setPassword] = useState<string>("");
@@ -81,6 +80,7 @@ const Login = () => {
   }
 
   return (
+    
     <div className="form-container">
       <p className="title">Iniciar sesión</p>
       <form className="form">
@@ -124,6 +124,7 @@ const Login = () => {
       </p>
     </div>
   );
+  
 };
 
 export default Login;
