@@ -41,7 +41,7 @@ const Registro = () => {
   function registrarUsuario(event: React.FormEvent): void {
     event.preventDefault();
 
-    // Validar campos vacíos o con solo espacios
+    // Validar campos vacíos
     if (
       !usuario.trim() ||
       !contrasena.trim() ||
