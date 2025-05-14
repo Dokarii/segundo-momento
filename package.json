@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "dbs": "json-server src/Services/fake-api.json",
+    "back": "json-server src/Services/fake-api.json",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
