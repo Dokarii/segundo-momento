@@ -1,16 +1,8 @@
 //import React from 'react'
 import "./Home.css";
 import { Link } from "react-router-dom";
-import { useEffect } from "react";
 
 const About = () => {
-    useEffect(() => {
-        document.body.classList.add("about-background");
-        return () => {
-          document.body.classList.remove("about-background");
-        };
-      }, []);
-
   return (
     <div className="container">
     <h1>Acerca de</h1>

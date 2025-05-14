@@ -30,14 +30,6 @@ const Login = () => {
       });
   }
 
-  useEffect(() => {
-    getUsuarios();
-    document.body.classList.add("login-background");
-    return () => {
-      document.body.classList.remove("login-background");
-    };
-  }, []);
-
   function buscarUsuario(): Usuario | undefined {
     return usuarios.find(
       (u: Usuario) => usuario === u.usuario && password === u.contrasena

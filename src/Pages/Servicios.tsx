@@ -1,14 +1,7 @@
 import { Link } from "react-router-dom";
-import { useEffect } from "react";
 import "./Home.css";
 
 const Servicios = () => {
-    useEffect(() => {
-        document.body.classList.add("services-background");
-        return () => {
-          document.body.classList.remove("services-background");
-        };
-      }, []);
 
   return (
     <div className="container">

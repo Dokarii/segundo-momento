@@ -1,15 +1,7 @@
 // import React from 'react'
 import "./Home.css";
 import { Link } from "react-router-dom";
-import { useEffect } from "react";
 const Contacto = () => {
-    useEffect(() => {
-        document.body.classList.add("contact-background");
-        return () => {
-          document.body.classList.remove("contact-background");
-        };
-      }, []);
-
   return (
     <div className="container">
     <h1>Contacto</h1>
